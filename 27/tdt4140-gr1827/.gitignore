@@ -1,0 +1,14 @@
+// output folders
+bin/
+target/
+.idea/
+.DS_Store
+
+// temporary generated files
+*.xtendbin
+*._trace
+
+node_modules/¨
+
+#Local connector
+tdt4140-gr1827/app.core/src/test/java/tdt4140/gr1827/app/core/LocalMySQLConnector.java

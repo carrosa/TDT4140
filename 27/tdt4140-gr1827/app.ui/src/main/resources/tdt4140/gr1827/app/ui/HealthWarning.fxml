@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="715.0" style="-fx-background-color: #003153;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdt4140.gr1827.app.ui.HealthWarningController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="72.0" prefHeight="17.0" prefWidth="305.0" text="Helsevarsler" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="patientTable" layoutX="31.0" layoutY="126.0" prefHeight="348.0" prefWidth="660.0">
+        <columns>
+          <TableColumn fx:id="ssnColumn" prefWidth="110.0" text="Personnummer" />
+          <TableColumn fx:id="timestampColumn" prefWidth="150.0" text="Timestamp" />
+            <TableColumn fx:id="avgpulseColumn" prefWidth="100.0" text="AvgPulse" />
+            <TableColumn fx:id="maxpulseColumn" prefWidth="100.0" text="MaxPulse" />
+            <TableColumn fx:id="minpulseColumn" prefWidth="100.0" text="MinPulse" />
+            <TableColumn fx:id="stepsColumn" prefWidth="100.0" text="Steps" />
+        </columns>
+      </TableView>
+      <ButtonBar fx:id="buttonBar" prefHeight="46.0" prefWidth="715.0" style="-fx-background-color: #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df;">
+         <buttons>
+            <Button fx:id="doctorHomeButton" mnemonicParsing="false" onAction="#handleDoctorToHome" text="Hjem">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="pasientOversiktButton" mnemonicParsing="false" onAction="#handleDoctorToPasientoversikt" text="Pasientoversikt">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="doctorAvgData" mnemonicParsing="false" onAction="#handleDoctorToAvgData" prefHeight="29.0" prefWidth="166.0" text="Gjennomsnittdata">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Logg ut">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="80.0" />
+         </padding>
+      </ButtonBar>
+      <Button fx:id="backToPatientSearch" layoutX="31.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackToPatientSearch" text="Tilbake" />
+      <Button fx:id="updateHealthWarnings" layoutX="614.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleUpdateHealthWarnings" text="Oppdater" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="715.0" style="-fx-background-color: #003153;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdt4140.gr1827.app.ui.UserFrontpageController">
+   <children>
+      <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="125.0" prefHeight="51.0" prefWidth="662.0" textFill="WHITE">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <ButtonBar fx:id="buttonBar" prefHeight="46.0" prefWidth="715.0" style="-fx-background-color: #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df #E3e2df;">
+         <buttons>
+            <Button fx:id="userHomeButton" mnemonicParsing="false" onAction="#handleUserToHome" text="Hjem">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="userRegistrertData" mnemonicParsing="false" onAction="#handleUserToRegistrertData" text="Registrert data">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <MenuButton mnemonicParsing="false" prefHeight="27.0" text="Innstillinger">
+               <items>
+                  <MenuItem fx:id="myUnits" mnemonicParsing="false" onAction="#handleUserToMyUnits" text="Mine enheter" />
+                  <MenuItem fx:id="userDataControl" mnemonicParsing="false" onAction="#handleUserToDataControl" text="Datakontroll" />
+                  <MenuItem fx:id="anonymousControl" mnemonicParsing="false" onAction="#handleUserToAnonymous" text="Anonymisering av data" />
+                  <MenuItem fx:id="regRestrictionButton" mnemonicParsing="false" onAction="#handleUserToRegRestriction" text="Tidsvindu for datainnsending" />
+                  <MenuItem fx:id="afterSendDataButton" mnemonicParsing="false" onAction="#handleAfterSendData" text="Ettersend data" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="deleteUserButton" mnemonicParsing="false" onAction="#handleDeleteUser" text="Slett meg" />
+               </items>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Logg ut">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+         <padding>
+            <Insets right="160.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>
